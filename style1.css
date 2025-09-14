@@ -1,0 +1,21 @@
+body {
+    background: linear-gradient(rgb(0, 0, 0), BROWN);
+    font-family:'Times';
+    min-height: 500vh;
+    padding: 20px;
+    color: white;
+}
+
+#titulo{
+    color: white;
+    text-align: center;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 50px;
+}
+
+#titulo2{
+    color: white;
+    text-align: center;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 50px;
+}
