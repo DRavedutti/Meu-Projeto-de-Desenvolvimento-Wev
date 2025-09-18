@@ -1,9 +1,87 @@
 body{
-    background-color:aliceblue;
-    font-family: 'Times New Roman';
+    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44));
+    font-family:'Times';
+    min-height: 500vh;
+    padding: 20px;
+    color: white
+}
+
+.imagem-container{
+    width: auto;
+    height: 200px;
+    border: 2px solid #ffffff; /* Exemplo de borda branca */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 10px;
+    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Cor de fundo clara */
+    box-shadow: 0 4px 8px rgba(10, 5, 5, 0.2); /* Sombra */
+    display: inline-block; /* Para o container se ajustar à imagem */
+    overflow: hidden; /* Esconde qualquer parte da imagem que ultrapasse o container */
+}
+
+.imagem-container img {
+    width: 100%; /* Faz a imagem preencher a largura do container */
+    height: 100%; /* Faz a imagem preencher a altura do container */
+    object-fit: cover; /* Mantém a proporção e cobre toda a área */
+    border-radius: 5px; /* Opcional: cantos levemente arredondados na imagem */
 }
 
 h1{
+    font-size: 2.5em;
     text-align:center;
-    color: rgb(128, 0, 0);
+    border: 2px solid #ffffff; /* Exemplo de borda branca */
+    border-radius: 10px; /* Cantos arredondados */
+    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Cor de fundo clara */
+    color: rgb(255, 255, 255);
+    padding: 0; /* Removemos o padding-bottom */
+    height: 75px; /* Definimos uma altura fixa */
+    display: flex; /* Usamos flexbox para centralização */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */;
 }
+
+h3{
+    font-size: 2.5em;
+    text-align:center;
+    border: 2px solid #ffffff; /* Exemplo de borda branca */
+    border-radius: 10px; /* Cantos arredondados */
+    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Cor de fundo clara */
+    color: rgb(255, 255, 255);
+    padding: 0; /* Removemos o padding-bottom */
+    height: 75px; /* Definimos uma altura fixa */
+    display: flex; /* Usamos flexbox para centralização */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */;
+}
+
+h4{
+    font-size: 2.5em;
+    text-align:center;
+    border: 2px solid #ffffff; /* Exemplo de borda branca */
+    border-radius: 10px; /* Cantos arredondados */
+    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Cor de fundo clara */
+    color: rgb(255, 255, 255);
+    padding: 0; /* Removemos o padding-bottom */
+    height: 75px; /* Definimos uma altura fixa */
+    display: flex; /* Usamos flexbox para centralização */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */;
+}
+
+
+.meu-botao-principal{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.meu-botao-principal:hover{
+    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44));
+    color: white;
+    transform: transalateyY(-2px);
+}
+
