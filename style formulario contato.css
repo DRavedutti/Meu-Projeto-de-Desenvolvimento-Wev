@@ -1,21 +1,78 @@
 body {
-    background: linear-gradient(rgb(0, 0, 0), BROWN);
+    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44));
     font-family:'Times';
     min-height: 500vh;
     padding: 20px;
-    color: white;
+    color: white
 }
 
-#titulo{
-    color: white;
-    text-align: center;
-    border-bottom: 2px solid #ffffff;
-    padding-bottom: 50px;
+.imagem-container-formulario{
+    display: flex; /* Ativa o flexbox para alinhamento */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: space-between; /* Distribui o espaço entre os elementos */
+    width: auto;
+    height: 470px;
+    border: 2px solid #ffffff; /* Exemplo de borda branca */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 10px;
+    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Cor de fundo clara */
+    box-shadow: 0 4px 8px rgba(10, 5, 5, 0.2); /* Sombra */
+    display: inline-block; /* Para o container se ajustar à imagem */
+    overflow: hidden; /* Esconde qualquer parte da imagem que ultrapasse o container */
 }
 
-#titulo2{
-    color: white;
-    text-align: center;
-    border-bottom: 2px solid #ffffff;
-    padding-bottom: 50px;
+.titulo{
+    font-size: 2.5em;
+    text-align:center;
+    border: 2px solid #ffffff; /* Exemplo de borda branca */
+    border-radius: 10px; /* Cantos arredondados */
+    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Cor de fundo clara */
+    color: rgb(255, 255, 255);
+    padding: 0; /* Removemos o padding-bottom */
+    height: 75px; /* Definimos uma altura fixa */
+    display: flex; /* Usamos flexbox para centralização */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */;
 }
+
+#mensagem_da_sua_receita {
+    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Gradiente preto e marrom*/
+    color: white; /* Cor do texto branca */
+    border: 2px solid white; /* Borda branca */
+    border-radius: 15px; /* Borda arredondada */
+    padding: 15px; /* Espaçamento interno */
+    font-family: Arial, sans-serif; /* Fonte */
+    font-size: 16px; /* Tamanho da fonte */
+    resize: vertical; /* Permite redimensionar apenas verticalmente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Estilo quando o textarea está em foco */
+#mensagem_da_sua_receita:focus {
+    outline: none; /* Remove contorno padrão */
+    border-color: #ffffff; /* Muda cor da borda ao focar */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* Sombra azul ao focar */
+}
+
+/* Placeholder com cor mais clara */
+#mensagem_da_sua_receita::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Placeholder semi-transparente */
+}
+
+.meu-botao{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s easse-in-out, transform 0.3s eas;
+}
+
+.meu-botao:hover{
+    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44));
+    color: white;
+    transform: transalateyY(-2px);
+}
+
