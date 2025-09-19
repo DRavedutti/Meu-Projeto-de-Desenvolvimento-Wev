@@ -1,78 +1,105 @@
+/* Estilos gerais para o corpo da página */
 body {
-    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44));
-    font-family:'Times';
-    min-height: 500vh;
-    padding: 20px;
-    color: white
+    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Gradiente de preto para vermelho escuro */
+    font-family: 'Times'; /* Define a fonte do texto */
+    min-height: 500vh; /* Altura mínima da página (500% da altura da viewport) */
+    padding: 20px; /* Espaçamento interno */
+    color: white; /* Cor do texto */
 }
 
-.imagem-container-formulario{
-    display: flex; /* Ativa o flexbox para alinhamento */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
+/* Container para a imagem do formulário */
+.imagem-container-formulario {
+    display: flex; /* Ativa o modelo flexbox para layout */
+    align-items: center; /* Centraliza os itens verticalmente */
     justify-content: space-between; /* Distribui o espaço entre os elementos */
-    width: auto;
-    height: 470px;
-    border: 2px solid #ffffff; /* Exemplo de borda branca */
+    width: 625px; /* Largura automática baseada no conteúdo */
+    height: 470px; /* Altura fixa do container */
+    border: 2px solid #ffffff; /* Borda branca de 2px */
     border-radius: 10px; /* Cantos arredondados */
-    padding: 10px;
-    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Cor de fundo clara */
-    box-shadow: 0 4px 8px rgba(10, 5, 5, 0.2); /* Sombra */
-    display: inline-block; /* Para o container se ajustar à imagem */
-    overflow: hidden; /* Esconde qualquer parte da imagem que ultrapasse o container */
+    padding: 10px; /* Espaçamento interno */
+    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Gradiente de fundo */
+    box-shadow: 0 4px 8px rgba(10, 5, 5, 0.2); /* Sombra suave */
+    overflow: hidden; /* Esconde conteúdo que ultrapassa os limites */
 }
 
-.titulo{
-    font-size: 2.5em;
-    text-align:center;
-    border: 2px solid #ffffff; /* Exemplo de borda branca */
+/* Estilo para o título principal */
+.titulo {
+    font-size: 2.5em; /* Tamanho da fonte (2.5 vezes o tamanho padrão) */
+    text-align: center; /* Alinhamento centralizado do texto */
+    border: 2px solid #ffffff; /* Borda branca */
     border-radius: 10px; /* Cantos arredondados */
-    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Cor de fundo clara */
-    color: rgb(255, 255, 255);
-    padding: 0; /* Removemos o padding-bottom */
-    height: 75px; /* Definimos uma altura fixa */
-    display: flex; /* Usamos flexbox para centralização */
+    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Gradiente de fundo */
+    color: rgb(255, 255, 255); /* Cor do texto branca */
+    padding: 0; /* Remove espaçamento interno */
+    height: 75px; /* Altura fixa */
+    display: flex; /* Ativa flexbox */
     justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */;
+    align-items: center; /* Centraliza verticalmente */
 }
 
+
+form label {
+    display: inline-block; /* Transforma o label em um elemento de bloco inline */
+    width: 150px; /* Largura fixa de 150 pixels para todos os labels */
+    text-align: left; /* Alinha o texto do label à esquerda */
+    margin-right: 10px; /* Adiciona 10px de margem à direita para espaçamento */
+    margin-bottom: 10px;/* Adiciona 10px de margem abaixo para espaçamento vertical */
+}
+
+.desalinhado {
+    display: inline !important; /* Volta ao display inline padrão (sobrescreve inline-block) */
+    width: auto !important; /* Largura automática (remove a largura fixa de 150px) */
+    text-align: left !important; /* Mantém alinhamento à esquerda (já era left mesmo) */
+    margin-right: 0 !important;  /* Remove completamente a margem direita */
+    margin-bottom: 0 !important; /* Remove completamente a margem inferior */
+}
+
+/* Estilo para a área de texto (textarea) */
 #mensagem_da_sua_receita {
-    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Gradiente preto e marrom*/
-    color: white; /* Cor do texto branca */
+    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Gradiente de fundo */
+    color: white; /* Cor do texto */
     border: 2px solid white; /* Borda branca */
-    border-radius: 15px; /* Borda arredondada */
+    border-radius: 15px; /* Cantos arredondados */
     padding: 15px; /* Espaçamento interno */
-    font-family: Arial, sans-serif; /* Fonte */
+    font-family: Arial, sans-serif; /* Tipo de fonte */
     font-size: 16px; /* Tamanho da fonte */
-    resize: vertical; /* Permite redimensionar apenas verticalmente */
+    resize: vertical; /* Permite redimensionamento apenas vertical */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
-/* Estilo quando o textarea está em foco */
+/* Estilo quando o textarea está em foco (selecionado) */
 #mensagem_da_sua_receita:focus {
-    outline: none; /* Remove contorno padrão */
-    border-color: #ffffff; /* Muda cor da borda ao focar */
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* Sombra azul ao focar */
+    outline: none; /* Remove contorno padrão do navegador */
+    border-color: #ffffff; /* Mantém a borda branca */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* Sombra branca mais intensa */
 }
 
-/* Placeholder com cor mais clara */
+/* Estilo para o texto placeholder do textarea */
 #mensagem_da_sua_receita::placeholder {
-    color: rgba(255, 255, 255, 0.7); /* Placeholder semi-transparente */
+    color: rgba(255, 255, 255, 0.7); /* Placeholder com opacidade reduzida */
 }
 
-.meu-botao{
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s easse-in-out, transform 0.3s eas;
+/* Estilo base para os botões */
+.meu-botao {
+    background-color: rgb(255, 255, 255); /* Fundo branco */
+    color: rgb(0, 0, 0); /* Texto preto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Remove borda padrão */
+    border-radius: 5px; /* Cantos levemente arredondados */
+    cursor: pointer; /* Cursor de pointer ao passar o mouse */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease; /* Transições suaves */
 }
 
-.meu-botao:hover{
-    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44));
-    color: white;
-    transform: transalateyY(-2px);
+/* Estilo para botões quando o mouse passa por cima (hover) */
+.meu-botao:hover {
+    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Gradiente no hover */
+    color: white; /* Texto branco no hover */
+    transform: translateY(-2px); /* Efeito de levitação (movimento para cima) */
+}
+
+a {
+    color: white !important; /* Muda a cor de todos os links para branco */
+    text-decoration: none !important; /* Remove sublinhado de todos os links */
 }
 
