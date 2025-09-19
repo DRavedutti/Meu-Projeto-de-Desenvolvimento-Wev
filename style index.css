@@ -1,87 +1,118 @@
-body{
-    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44));
-    font-family:'Times';
-    min-height: 500vh;
-    padding: 20px;
-    color: white
+/* Estilos gerais para o corpo da página */
+body {
+    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Gradiente de preto para vermelho escuro */    font-family: 'Times'; /* Define a fonte do texto */
+    min-height: 500vh; /* Altura mínima da página (500% da altura da viewport) */
+    padding: 20px; /* Espaçamento interno */
+    color: white; /* Cor do texto */
 }
 
-.imagem-container{
-    width: auto;
-    height: 200px;
-    border: 2px solid #ffffff; /* Exemplo de borda branca */
+/* Container para imagens */
+.imagem-container {
+    width: auto; /* Largura automática baseada no conteúdo */
+    height: 200px; /* Altura fixa */
+    border: 2px solid #ffffff; /* Borda branca de 2px */
     border-radius: 10px; /* Cantos arredondados */
-    padding: 10px;
-    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Cor de fundo clara */
-    box-shadow: 0 4px 8px rgba(10, 5, 5, 0.2); /* Sombra */
-    display: inline-block; /* Para o container se ajustar à imagem */
-    overflow: hidden; /* Esconde qualquer parte da imagem que ultrapasse o container */
+    padding: 10px; /* Espaçamento interno */
+    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Gradiente de fundo */
+    box-shadow: 0 4px 8px rgba(10, 5, 5, 0.2); /* Sombra suave */
+    display: inline-block; /* Exibe como elemento inline-block */
+    overflow: hidden; /* Esconde conteúdo que ultrapassa os limites */
 }
 
+/* Estilo para imagens dentro do container */
 .imagem-container img {
-    width: 100%; /* Faz a imagem preencher a largura do container */
-    height: 100%; /* Faz a imagem preencher a altura do container */
-    object-fit: cover; /* Mantém a proporção e cobre toda a área */
-    border-radius: 5px; /* Opcional: cantos levemente arredondados na imagem */
+    width: 100%; /* Largura de 100% do container */
+    height: 100%; /* Altura de 100% do container */
+    object-fit: cover; /* Preenche o container mantendo a proporção */
+    border-radius: 5px; /* Cantos levemente arredondados */
 }
 
-h1{
-    font-size: 2.5em;
-    text-align:center;
-    border: 2px solid #ffffff; /* Exemplo de borda branca */
+/* Estilo para cabeçalho h1 */
+h1 {
+    font-size: 2.5em; /* Tamanho grande de fonte */
+    text-align: center; /* Alinhamento centralizado */
+    border: 2px solid #ffffff; /* Borda branca */
     border-radius: 10px; /* Cantos arredondados */
-    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Cor de fundo clara */
-    color: rgb(255, 255, 255);
-    padding: 0; /* Removemos o padding-bottom */
-    height: 75px; /* Definimos uma altura fixa */
-    display: flex; /* Usamos flexbox para centralização */
+    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Gradiente de fundo */
+    color: rgb(255, 255, 255); /* Cor do texto branca */
+    padding: 0; /* Remove espaçamento interno */
+    height: 75px; /* Altura fixa */
+    display: flex; /* Ativa flexbox */
     justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */;
+    align-items: center; /* Centraliza verticalmente */
 }
 
-h3{
+/*Aplica estilos apenas aos links dentro da navegação (tag <nav>)*/
+nav ul li a {
+    color: white !important; /* Muda a cor do texto para branco (sobrescreve estilos padrão) */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+}
+
+/*Altera a aparência quando o usuário passa o mouse sobre os links do menu*/
+nav ul li a:hover {
+    color: #f0f0f0 !important; /* Muda para um branco levemente mais claro no hover */
+    text-decoration: underline; /* Adiciona sublinhado quando o mouse passa por cima */
+}
+
+/* Estilo para cabeçalho h3 (herda estilos do h1) */
+h3 {
     font-size: 2.5em;
-    text-align:center;
-    border: 2px solid #ffffff; /* Exemplo de borda branca */
-    border-radius: 10px; /* Cantos arredondados */
-    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Cor de fundo clara */
-    color: rgb(255, 255, 255);
-    padding: 0; /* Removemos o padding-bottom */
-    height: 75px; /* Definimos uma altura fixa */
-    display: flex; /* Usamos flexbox para centralização */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */;
-}
-
-h4{
-    font-size: 2.5em;
-    text-align:center;
-    border: 2px solid #ffffff; /* Exemplo de borda branca */
-    border-radius: 10px; /* Cantos arredondados */
-    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Cor de fundo clara */
-    color: rgb(255, 255, 255);
-    padding: 0; /* Removemos o padding-bottom */
-    height: 75px; /* Definimos uma altura fixa */
-    display: flex; /* Usamos flexbox para centralização */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */;
-}
-
-
-.meu-botao-principal{
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease;
-}
-
-.meu-botao-principal:hover{
+    text-align: center;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
     background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44));
-    color: white;
-    transform: transalateyY(-2px);
+    color: rgb(255, 255, 255);
+    padding: 0;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* Aplica estilos específicos aos links (<a>) que estão dentro de listas (<li>) que estão dentro de listas não ordenadas (<ul>) que estão dentro da tag <aside>*/
+aside ul li a {
+    color: white !important;        /* Define a cor do texto como branco (sobrescreve outros estilos) */
+    text-decoration: none;          /* Remove o sublinhado padrão dos links */
+}
+
+/* Estilo para cabeçalho h4 (herda estilos do h1) */
+h4 {
+    font-size: 2.5em;
+    text-align: center;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44));
+    color: rgb(255, 255, 255);
+    padding: 0;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo base para botões principais */
+.meu-botao-principal {
+    background-color: rgb(255, 255, 255); /* Fundo branco */
+    color: rgb(0, 0, 0); /* Texto preto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Remove borda padrão */
+    border-radius: 5px; /* Cantos levemente arredondados */
+    cursor: pointer; /* Cursor de pointer ao passar o mouse */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease; /* Transições suaves */
+}
+
+/* Estilo para botões principais quando o mouse passa por cima */
+.meu-botao-principal:hover {
+    background: linear-gradient(rgb(0, 0, 0), rgb(173, 44, 44)); /* Gradiente no hover */
+    color: white; /* Texto branco no hover */
+    transform: translateY(-2px); /* Efeito de levitação (movimento para cima) */
+}
+
+/* Aplica estilos a TODOS os elementos <a> do documento HTML*/
+a {
+    color: white !important; /* Muda a cor de todos os links para branco */
+    text-decoration: none !important; /* Remove sublinhado de todos os links */
+}
+
 
